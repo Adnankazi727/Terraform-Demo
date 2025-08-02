@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "my-instance" {
-    ami = "ami-08ca1d1e465fbfe0c"
-    instance_type = "t2.micro"
+    ami = var.image_id
+    instance_type = var.instance_type
     vpc_security_group_ids = [aws_security_group.my_security_group.id]
     #  vpc_security_group_ids = [<RESOURCETYPE>.<RESOURCENAME>.<ATTRIBUTE>]
     tags = {
@@ -13,7 +13,7 @@ resource "aws_instance" "my-instance" {
 }
 
     resource "aws_security_group" "my_security_group" {
-        region = "us-east-2"
+        region = var.region
         description = "new sg"
         name = "new-security-group"
         ingress {
@@ -32,4 +32,24 @@ resource "aws_instance" "my-instance" {
             env = "dev"
         }
         vpc_id = "vpc-06026ffa98c044cfe"
+    }
+
+    variable "image_id" {
+      default     = "ami-08ca1d1e465fbfe0c"
+    }
+
+    variable "instance_type" {
+        default = "t2.micro"
+    }
+    
+    variable "region" {
+        default = "us-east-2"
+    }
+
+    output "public_ip" {
+      value  =  aws_instance.my_instance.public_ip
+    }
+    
+    output  "demo" {
+        value = "My Name is Adnan"
     }
