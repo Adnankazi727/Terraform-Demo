@@ -1,7 +1,7 @@
 resource "aws_lb_target_group" "tg_home" {
     name = "tg_home"
     port = 80
-    protocol_version = http 
+    protocol = "HTTP"
     vpc_id = var.vpc_id
     tags = {
         env = var.env
@@ -12,32 +12,32 @@ resource "aws_lb_target_group" "tg_home" {
     }
 
     resource "aws_lb_target_group" "tg_laptop" {
-    name = "tg_laptop"
-    port = 80
-    protocol_version = http 
-    vpc_id = var.vpc_id
-    tags = {
-        env = var.env
-    }
-    health_check = {
-        path = "/laptop"
-    }
+        name = "tg_laptop"
+        port = 80
+        protocol = "HTTP"
+        vpc_id = var.vpc_id
+        tags = {
+            env = var.env
+        }
+        health_check = {
+            path = "/laptop"
+        }
     }
     
     resource "aws_lb_target_group" "tg_cloth" {
-    name = "tg_cloth"
-    port = 80
-    protocol_version = http 
-    vpc_id = var.vpc_id
-    tags = {
-        env = var.env
-    }
-    health_check = {
-        path = "/cloth"
-    }
+      name = "tg_cloth"
+      port = 80
+      protocol = "HTTP"
+      vpc_id = var.vpc_id
+      tags = {
+          env = var.env
+        }
+      health_check = {
+          path = "/cloth"
+        }
     }
     
-    resource "aws_lb" "app_lb" {
+resource "aws_lb" "app_lb" {
   name               = "app_lb"
   internal           = false
   load_balancer_type = "application"

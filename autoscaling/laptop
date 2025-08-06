@@ -1,0 +1,6 @@
+#!/bin/bash
+apt update -y
+apt install apache2 -y
+systemctl start apache2
+mkdir /var/www/html/laptop
+echo "<h1> SALE SALE SALE ON LAPTOP" > /var/www/html/laptop/index.html

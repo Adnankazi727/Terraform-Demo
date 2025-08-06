@@ -1,0 +1,45 @@
+variable "image_id" {
+    default = "ami-0f918f7e67a3323f0"
+}
+
+variable "instance_type" {
+    default = "t2.micro"
+}
+
+variable "security_group_ids" {
+    default = ["sg-0721e423bb916aef4"]
+}
+
+variable "key_pair" {
+    default = "yoyo-key"
+}
+
+variable "env" {
+    default = "dev"
+}
+
+variable "min_size" {
+    default = "2"
+}
+
+variable "max_size" {
+    default = "5"
+}
+
+variable "desired_size" {
+  default     = "2"
+}
+
+variable "availability_zone" {
+    default = ["ap-south-1a", "ap-south-1b"]
+}
+
+variable "vpc_id" {
+    default = "vpc-06aa84e0e2fd15122"
+}
+
+variable "subnets" {
+    default = ["subnet-0b5cbcdc045011037", "subnet-03bd231d60cec41f3", "subnet-02c40b3b1eec60b03"]
+}
+
+

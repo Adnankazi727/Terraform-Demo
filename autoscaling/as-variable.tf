@@ -11,7 +11,7 @@ variable  "security_group_ids" {
 }
 
 variable  "key_pair" {
-    default = ["ubunto-1"]
+    default = "ubunto-1"
 }
 
 variable  "env" {
@@ -32,7 +32,7 @@ variable "desired_size" {
 }
 
 variable "availability_zone" {
-    default = ["ap-south-1a", "ap-south-1c", "ap-south-1b"]
+    default = ["ap-south-1a", "ap-south-1b"]
 }
 
 variable "vpc_id" {
