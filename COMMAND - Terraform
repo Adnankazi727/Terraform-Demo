@@ -1,0 +1,7 @@
+## Terraform Lifecycle:
+
+- terraform init = (Initialize the Terraform configuration. Providers plugin download module load, Backend Load)
+- terraform plan = (Blueprint of infra after apply)
+- terraform apply = (apply the terraform configuration)
+- terraform destroy = (delete the terraform configuration)
+- 
