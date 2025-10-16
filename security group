@@ -1,0 +1,35 @@
+provider "aws" {
+   region = us-east-1
+   }
+
+resource "aws_instance" "my_instance"
+   ami = "ami-09298492083"
+   instance_type = "t2.micro"
+   vpc_security_group_ids = [aws_security_group.my_sercurity_group.id]   
+   ## vpc_security_group_ids = [<RESOURCETYPE>.<RESOURCENAME>.<ATTRIBUTE>]
+   tags = {
+      env = "dev"
+      }
+  }
+
+  resource "aws_security_group" "my_sercurity_group" {
+     region = "us-east-1"
+     description = "new-sg"
+     name = "new-security-group" 
+     ingress {
+        protocol = "tcp"
+        from_port = 80
+        to_port = 80
+        cidr_blocks = "0.0.0.0/0"
+     }
+     egress {
+        protocol = "-1"    (-1 is for all),   [ingress is for outbound-rule && engree is for inbound rule] 
+        from_port = 0
+        to_port = 0
+        cidr_blocks = "0.0.0.0/0"
+     }
+     tags = {
+        env = "dev"
+      }
+      vpc_id = "vpc-9279479575937"
+    }
