@@ -20,3 +20,8 @@
 - variable 
 - output
 - module 
+
+** Resource configuration status:
+- " + " New create
+- " - " Delete
+- " ~ " Change / Edit 
