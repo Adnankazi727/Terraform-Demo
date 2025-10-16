@@ -2,7 +2,21 @@
   Terraform - IAC - Infra Provisioning Tool
   CloudFormation - IAC
 
-  Shell Script | Ansible | Terraform 
+ ** Shell Script | Ansible | Terraform 
   Bash Scripting | Configuration Tool | Infrastructure Provisioning Tool
 
-  
+## Terrafrom Language **
+- Syntax:
+   Key = value
+- No Indentation Specific. {} to define blocks.
+- HashoCope Configuration Language.
+- Terraform configuration file
+- .tf / .tf.json
+- Block Specfiy.
+
+- Provider "<PROVIDER-NAME>" {}
+- resource "<RESOURCE-TYPE>" "<RESOURCE-NAME>" {}
+- data
+- variable 
+- output
+- module 
