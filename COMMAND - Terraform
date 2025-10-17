@@ -3,5 +3,6 @@
 - terraform init = (Initialize the Terraform configuration. Providers plugin download module load, Backend Load)
 - terraform plan = (Blueprint of infra after apply)
 - terraform apply = (apply the terraform configuration)
+- terraform apply --auto-approve = This option is used to bypass.
 - terraform destroy = (delete the terraform configuration)
 - 
