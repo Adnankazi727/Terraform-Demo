@@ -5,4 +5,9 @@
 - terraform apply = (apply the terraform configuration)
 - terraform apply --auto-approve = This option is used to bypass.
 - terraform destroy = (delete the terraform configuration)
+- terraform workspace = tf workspace list 
+- tf workspace = show = To show workspace of terraform
+- tf workspace list = To show the workspace list of Terraform 
+- terraform --var-file=vars/dev.tfvar = For Variable 
+- terraform workspace select dev = to Change the environment.
 - 
