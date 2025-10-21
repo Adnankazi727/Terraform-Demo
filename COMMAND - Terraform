@@ -10,4 +10,7 @@
 - tf workspace list = To show the workspace list of Terraform 
 - terraform --var-file=vars/dev.tfvar = For Variable 
 - terraform workspace select dev = to Change the environment.
+- terraform destroy - To destroy 
+- terraform --replace="aws_instance.my-instance" - To replace the instance replace 
+- terraform apply --refresh-only = to refresh the environment of the infrastructure
 - 
