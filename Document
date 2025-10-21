@@ -26,3 +26,57 @@
 - " - " Delete
 - " ~ " Change / Edit 
 
+### Modules
+- Terraform scripts that can be reused
+
+### Terraform.tfstate
+instance = t2.medium 
+
+tf apply -var-file=dev.tfvar
+tf apply -var-file=prod.tfvar
+
+terraform workspace - terraform.state
+
+********************
+### Loops in Terraform:
+# Without Loop:
+## Code repeat, execution time increase, difficult to manage 
+
+## With Loop:
+### Code doesn't repeat, reduces time, is easy to manage, less lines of code 
+
+## TYPES OF LOOP:
+# Count - simplest loop.
+# for - each
+# for 
+********************************
+## Terraform Commands:
+# terraform  = {Taint, refresh, import, destroy} 
+
+## terraform provisioners...
+* local-e
+## terraform taint 
+## ec2 instance - forcefully recreate
+## terraform apply --replace=aws_instance.my-instance
+
+## terraform refresh - .tfstate file update
+### terraform apply --refresh-only 
+
+## terraform import - bring existing resource to terraform 
+### terraform import aws_instance.my-instance intance-id
+
+## terraform destroy - To destory all resource 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
