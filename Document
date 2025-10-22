@@ -66,6 +66,12 @@ terraform workspace - terraform.state
 ### terraform import aws_instance.my-instance intance-id
 
 ## terraform destroy - To destory all resource 
+### terraform destroy --target=aws_instance.my_instance
+
+## provisioners blocks 
+### local-exec - command/script run on machine where tf coomand executed 
+### remote-exec - command/script run on remote resource (ec2 instance) - ssh
+### file - copy file local machine to remote resource 
 
 
 
